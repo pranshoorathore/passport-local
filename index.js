@@ -63,7 +63,7 @@ passport.deserializeUser(async (id, done) => {
 
 // MongoDB Connection
 mongoose
-  .connect('mongodb+srv://pranshoo:XJ3WtpotzYZPU15u@cluster-psr.res3m.mongodb.net/user', {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
